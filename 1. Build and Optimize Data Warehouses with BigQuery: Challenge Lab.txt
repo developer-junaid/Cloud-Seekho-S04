@@ -1,4 +1,4 @@
-Create and Manage Cloud Resources: Challenge Lab
+Build and Optimize Data Warehouses with BigQuery: Challenge Lab
 ==============================================================
 
 
