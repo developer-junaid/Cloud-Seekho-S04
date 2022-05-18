@@ -1,0 +1,85 @@
+Video: https://youtu.be/EyminPChyeM
+
+Monitor and Log with Google Cloud Operations Suite: Challenge Lab
+=================================================================
+
+Start Lab
+-------------
+
+Task 1: Check that Cloud Monitoring has been enabled
+
+Go to: Navigation Bar > Montoring > Dashboards > Media Dashboard
+
+
+Task 2: Configure a Compute instance and generate Custom Cloud Monitoring 
+----------------------------------------------------------------
+
+Copy the search keyword at last paragraph
+Go back to Monitoring > Metrics explorer > Select a metric 
+Paste the keyword there 
+
+Click Navbar > Compute Engine > VM Instances > [YOUR_GIVEN_INSTANCE] > Stop > Stop
+Wait for it to stop
+
+Click Edit 
+Edit the Automation script > Replace your [PROJECT ID, INSTANCE ID and COMPUTE ZONE]
+Copy and paste the credentials there:
+
+PROJECT ID: Get from the lab info
+INSTANCE ID: Get from the top info on the same page
+INSTANCE ZONE: Get from the top info on the same page
+
+Click Save
+Click 3 dots > start / Resume > Start
+Wait for it to start
+
+
+Copy the keyword of metric again 
+Go to Monitoring > Metrics explorer > Selecty a metric > Paste keyword
+(Refresh the page if you didn't get anything, and repeat)
+
+Click VM Instance > Custom > click your metric info (OpenCensus/my.videoservice.org/etc...) > Click Apply
+
+
+Task 3: Create a custom metric using Cloud Operations logging events
+--------------------------------------------------------------
+* Metric name will be different for all 
+
+Click Navigation > Logging > Logs Explorer
+Go to Tip 4 and copy the log generation code
+Go back to Logs Explorer > Click Show Query > Paste the code > Run query 
+When logs are shown > Click Create metric > Paste the metric name > Create Metric
+
+
+Task 4: Add custom metrics to the Media Dashboard in Cloud Operations Monitoring
+----------------------------------------------------
+
+
+Go to Navigation > Monitoring > Dashboards > Click Media Dashboard > Edit Dashboard  > Line > VM Instance - CPU UTILIZATION Click > VM INSTANCE > Custom > Select your Metric (OpenCensus/etc...) > Apply
+
+Click Add filter > Label (instance id) 
+Click value > click your instance id > Done
+
+Refresh the page
+
+Copy the Custom Metric Name from the info sidebar
+Go back to the page > Click Line > VM Instance > Paste name > turn off Show only active resources ... > VM Instance > Log-based Metric > logging/etc... > Apply
+
+* Auto Save must remain on
+
+
+
+Task 5: Create a Cloud Operations alert based on the rate of high resolution video file uploads
+--------------------------------------------
+
+* Time may be different of alert
+* Copy the Custom metric name from info sidebar
+
+Go to Monitoring > Alerting > Create Policy > Select a Metric > Paste Name > turn off the Show only ... >VM Instance > Log-based Metric > logging/etc... > Apply 
+
+Click Next > Paste the Threshold value  > Next > Toggle off "Use notification channel" > Paste the alert name (Custom Metric Name) > Next > Create Policy
+
+
+---
+
+CONGRATS !!

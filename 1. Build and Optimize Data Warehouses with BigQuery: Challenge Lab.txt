@@ -1,5 +1,8 @@
+Video: https://youtu.be/krXCi2FsIDs
+
+
 Build and Optimize Data Warehouses with BigQuery: Challenge Lab
-==============================================================
+===============================================================
 
 
 Task 1: Create a table partitioned by date
