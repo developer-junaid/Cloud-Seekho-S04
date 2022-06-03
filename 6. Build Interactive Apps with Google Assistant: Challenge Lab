@@ -1,0 +1,44 @@
+Video: https://youtu.be/eHF1yvUd2A0
+
+Build Interactive Apps with Google Assistant: Challenge Lab
+=================================================================
+
+
+Start Lab
+--------------
+
+- Open Console
+
+Task 1:
+---------------------
+- Nav > Cloud Functions > Create Function 
+- Name the function
+- Check Allow unauthenticated invocations > Save
+
+- Select Maximum number of instances from the given value > Next
+- Runtime = Python 3.9
+- Name entry point
+- Paste main.py > Replace entry point
+- Paste requirements.txt > Deploy
+
+
+Task 2:
+----------
+- Open "Actions console link" in a new tab
+- New Project > Agree > Select project > Import project
+- Click top left Action console > Click project > Decide how your action is invoked > Change name > Save
+
+- Add Actions > Get Started > Custom > Build > Agree > Save
+- Fullfillment > Enable Webhook > Paste url from the function's trigger url > Save
+- Intents > Default Welcome intent > Responses > Add Response > Text Response > Paste the response
+- Intents > Default Fallback intent > Responses > Set this intent as end of conversation : Fullfillment section (expand) > Enable webhook call for this intent > Save
+- Integrations > Preview migration > Test > Allow > view activity controls > Turn on > Got it > Click talk to magic ball 8 > Type: hi > Enter > Type: Is hen a bird? > Enter
+
+
+Task 3:
+---------
+
+- Copy function code
+- Edit function > Code > Paste after line 13 > Deploy
+- Dialogflow tab > Integrations > Preview Migration > Test > Reset Test > Talk to magic 8 ball > Paste Chinese question > Enter : Paste next question > Enter : Paste last question > Enter
+- If it doesn't update : Refresh
